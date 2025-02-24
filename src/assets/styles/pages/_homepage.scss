@@ -1,0 +1,23 @@
+/*-----------PartnerSection---------*/
+.partners {
+  padding: 4rem 0;
+  &__text {
+    text-align: center;
+    margin-bottom: 1rem;
+    h4 {
+      color: #3c3c3c;
+    }
+    p {
+      color: #818181;
+    }
+  }
+  &__cards {
+    border-bottom: 1px solid #b4b1b1;
+    padding-bottom: 1.5rem;
+    display: flex;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
