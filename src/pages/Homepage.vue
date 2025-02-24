@@ -1,12 +1,17 @@
 <template>
     <div>
-        <Slider />
+        <section>
+            <Hero />
+        </section>
+        <h1>Hello world</h1>
     </div>
 </template>
 
 <script>
-import Slider from '../components/Slider.vue';
+import Hero from '../components/Hero.vue';
 export default {
-    Slider
+    components: {
+        Hero
+    }
 }
 </script>

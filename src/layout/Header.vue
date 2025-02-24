@@ -5,9 +5,11 @@
         </div>
         <nav class="header__nav">
             <ul class="header__nav__list">
-                <li><span>About</span></li>
+                <li>About</li>
                 <li>Pricing</li>
                 <li>Products</li>
+                <li>Resources</li>
+                <li>Why W3</li>
                 <li>FAQs</li>
                 <li>Contacts</li>
 

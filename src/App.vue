@@ -1,9 +1,14 @@
 <template>
-  <div>
-    <Layout>
-      <Homepage />
-    </Layout>
-  </div>
+  <Layout>
+    <Suspense>
+      <template #default>
+        <Homepage />
+      </template>
+      <template #fallback>
+        <h1>Loading....</h1>
+      </template>
+    </Suspense>
+  </Layout>
 </template>
 
 
@@ -11,10 +16,13 @@
 import Layout from './Layout.vue';
 import Homepage from './pages/Homepage.vue';
 
+
+
 export default {
   components: {
-    Layout,
-    Homepage
+    Homepage,
+    Layout
+
   }
 }
 </script>
