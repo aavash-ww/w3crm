@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  align-items: center;
+  //   justify-content: space-between;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  &__logo {
+    width: auto;
+    height: 72px;
+    margin-right: 4rem;
+    img {
+      @extend %image-cover;
+    }
+  }
+  &__nav {
+    display: flex;
+    &__list {
+      display: flex;
+      align-items: center;
+
+      li {
+        padding: 0 2rem;
+        cursor: pointer;
+        position: relative;
+        
+        &::after {
+          content: "";
+          width: 90%;
+          height: 3px;
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          background: $secondary;
+          transform: scaleX(0);
+          transform-origin: 0% 100%;
+          transition: transform 0.3s ease;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          
+        }
+      }
+    }
+  }
+  &__button {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &__search {
+      width: 32px;
+      height: 32px;
+      img {
+        @extend %image-cover;
+      }
+    }
+    .login-btn {
+      text-decoration: underline;
+    //   margin-right: 1rem;
+    }
+    .free-trial-btn {
+      padding: 1rem 1.5rem;
+      background: $secondary2;
+      border-radius: 4rem;
+    }
+  }
+}
