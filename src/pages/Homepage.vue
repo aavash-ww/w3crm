@@ -17,8 +17,8 @@
     </section>
 
     <!-- Why section  -->
-    <section>
-            <h3>Why CRM is so needed?</h3>
+    <section class="why-section">
+            <h3>Why CRM is must?</h3>
             <Whycrm/>
             
     </section>

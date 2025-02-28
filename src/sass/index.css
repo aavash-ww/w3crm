@@ -67,7 +67,7 @@ a {
      object-fit: cover;
 }
 
-.slider__text__buttongrp__2, .slider__text__buttongrp__1, .header__button .free-trial-btn {
+.whycrm__content__text span, .slider__text__buttongrp__2, .slider__text__buttongrp__1, .header__button .free-trial-btn {
   padding: 1rem 1.5rem;
   border-radius: 4rem;
   cursor: pointer;
@@ -75,9 +75,9 @@ a {
   color: whitesmoke;
 }
 
-.whycrm__wrap {
+.whycrm__nav {
   width: 100%;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -219,17 +219,16 @@ a {
   width: 20px;
 }
 
-.whycrm__wrap {
-  justify-content: space-between;
+.whycrm {
+  padding: 2rem 0;
+}
+.whycrm__nav {
+  justify-content: space-around;
   align-items: center;
   display: flex;
   position: relative;
-  padding: 0 1rem 0.5rem 1rem;
 }
-.whycrm__wrap p {
-  position: relative;
-}
-.whycrm__wrap::after {
+.whycrm__nav::after {
   content: "";
   position: absolute;
   background: black;
@@ -238,17 +237,65 @@ a {
   left: 0;
   bottom: -3px;
 }
-.whycrm__wrap .active {
+.whycrm__nav .active {
   font-weight: 700;
-  position: relative;
+  color: #0d4d5f;
 }
-.whycrm__wrap .active::after {
-  position: absolute;
-  background: black;
-  height: 3px;
-  width: 100%;
-  left: 0;
-  bottom: -3px;
+.whycrm__nav p {
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+.whycrm__nav p:hover {
+  color: #0d4d5f;
+  font-weight: 700;
+}
+.whycrm__content {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+.whycrm__content__image {
+  margin-top: 1rem;
+}
+.whycrm__content__image img {
+  border-radius: 1rem;
+}
+.whycrm__content__text {
+  padding: 1.3rem 0;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.whycrm__content__text__wrap {
+  margin-bottom: 1.5rem;
+}
+.whycrm__content__text__wrap p {
+  padding-right: 2rem;
+  font-size: 0.9rem;
+  color: #818181;
+}
+.whycrm__content__text__wrap__title {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.whycrm__content__text__wrap__title h6 {
+  color: #3c3c3c;
+}
+.whycrm__content__text__wrap__title img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.whycrm__content__text span {
+  display: table;
+  border: none;
+  background: #aae4f4;
+  color: #13728c;
+  transition: background ease 0.3s;
+}
+.whycrm__content__text span:hover {
+  background: #7ed5ed;
 }
 
 /*-----------PartnerSection---------*/
@@ -273,4 +320,10 @@ a {
   max-width: 90%;
   margin: 0 auto;
   justify-content: space-between;
+}
+
+.why-section h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #072932;
 }/*# sourceMappingURL=index.css.map */

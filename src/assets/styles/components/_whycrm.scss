@@ -1,14 +1,12 @@
 .whycrm {
-  &__wrap {
+  padding: 2rem 0;
+  &__nav {
     @extend %container;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     display: flex;
     position: relative;
-    padding: 0 1rem 0.5rem 1rem;
-    p {
-      position: relative;
-    }
+    // padding: 0 5rem;
     &::after {
       content: "";
       position: absolute;
@@ -20,15 +18,63 @@
     }
     .active {
       font-weight: 700;
-      position: relative;
-
-      &::after {
-        position: absolute;
-        background: black;
-        height: 3px;
-        width: 100%;
-        left: 0;
-        bottom: -3px;
+      color: darken($primary2, 10%);
+    }
+    p {
+      // padding: 0 4rem;
+      transition: all ease 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: darken($primary2, 10%);
+        font-weight: 700;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    &__image {
+      margin-top: 1rem;
+      img {
+        border-radius: 1rem;
+      }
+    }
+    &__text {
+      padding: 1.3rem 0;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+      &__wrap {
+        margin-bottom: 1.5rem;
+        p {
+          padding-right: 2rem;
+          font-size: 0.9rem;
+          color: #818181;
+        }
+        &__title {
+          display: flex;
+          gap: 0.5rem;
+          margin-bottom: 0.4rem;
+          h6 {
+            color: #3c3c3c;
+          }
+          img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+          }
+        }
+      }
+      span {
+        @extend %button;
+        display: table;
+        border: none;
+        background: lighten($primary2, 50%);
+        color: $primary2;
+        transition: background ease 0.3s;
+        &:hover {
+          background: lighten($primary2, 40%);
+        }
       }
     }
   }
