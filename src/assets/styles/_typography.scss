@@ -6,12 +6,13 @@ $tertiary_font: "Roboto", serif;
 
 html {
   font-size: 16px;
+  font-family: $primary_font, sans-serif;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.5;
-//   font-family: $secondary_font;
+  //   font-family: $secondary_font;
 }
 
 h1 {

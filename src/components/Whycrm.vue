@@ -42,12 +42,12 @@ export default {
                 },
                 {
                     icon: "/src/assets/icons/tick.svg",
-                    title: "Customize your pipelines",
+                    title: "Reach your sales potential",
                     descrption: "Import data from spreadsheets or other pipeline management software in  just a few clicks. Link products to deals to track  negotiations and see the bigger picture."
                 },
                 {
                     icon: "/src/assets/icons/tick.svg",
-                    title: "Customize your pipelines",
+                    title: "Manage your deals and leads",
                     descrption: "Import data from spreadsheets or other pipeline management software in  just a few clicks. Link products to deals to track  negotiations and see the bigger picture."
                 },
                 {

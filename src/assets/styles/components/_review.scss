@@ -1,0 +1,60 @@
+.review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 85%;
+  width: 100%;
+  margin: 0 auto;
+  font-family: $tertiary_font;
+  padding: 2rem 0;
+  &__image {
+    display: flex;
+    padding-right: 1.5rem;
+
+    &__person {
+      height: 250px;
+      width: auto;
+      border-radius: 8px;
+    }
+    &__feature {
+      width: auto;
+      height: 200px;
+      position: relative;
+      left: -70px;
+      top: 40px;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -40px;
+    top: 0;
+    text-align: left;
+    &__wrap {
+      h3 {
+        margin-bottom: 1rem;
+      }
+
+      &__review {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        p {
+          display: inline;
+        }
+        img {
+          display: inline;
+          width: 28px;
+          height: 28px;
+          object-fit: contain;
+        }
+      }
+    }
+    &__name {
+      &__main {
+        font-weight: bolder;
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
