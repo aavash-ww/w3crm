@@ -387,6 +387,7 @@ a {
 .footer {
   background-color: #292929;
   color: white;
+  margin-top: 3rem;
 }
 .footer .footer-wrapper {
   padding-top: 4rem;
