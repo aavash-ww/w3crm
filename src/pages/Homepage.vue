@@ -10,9 +10,6 @@
         </div>
         <div class="partners__cards">
             <Trustcard />
-            <Trustcard />
-            <Trustcard />
-            <Trustcard />
         </div>
     </section>
 

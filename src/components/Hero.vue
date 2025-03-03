@@ -1,11 +1,10 @@
 <template>
     <div class="slider">
         <div class="slider__text">
-            <h1>From reservations to relationships - streamline your restaurant’s growth.</h1>
+            <h1>From reservations to relationships - streamline your growth.</h1>
             <p>
                 More than just tables and orders – build lasting customer connections.
-                Enhance loyalty with personalized experiences and seamless interactions.
-                Turn every visit into a meaningful relationship with smart CRM solutions.
+
             </p>
             <div class="slider__text__buttongrp">
                 <div class="slider__text__buttongrp__1">Try free demo</div>

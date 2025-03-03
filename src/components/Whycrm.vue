@@ -1,8 +1,12 @@
 <template>
     <div class="whycrm">
-        <nav class="whycrm__nav">
-            <p class="active">Manage Leads and deals</p>
-            <p v-for="el, idx in topics" :key="idx">{{ el }}</p>
+        <nav class="tabs">
+
+            <div v-for="(tab, index) in tabs" :key="index" class="tab" :class="{ active: activeIndex === index }"
+                @click="setActiveTab(index, $event)">
+                {{ tab }}
+            </div>
+            <div class="underline" :style="underlineStyle"></div>
         </nav>
         <div class="whycrm__content">
             <div class="whycrm__content__image">
@@ -25,15 +29,39 @@
 </template>
 
 <script>
+import { ref } from "vue";
 export default {
+
+    setup() {
+        const tabs = ref([
+            "Manage Leads and deals",
+            "One space for all sales",
+            "Automate and scale",
+            "Instant Sales "
+        ]);
+        const activeIndex = ref(0);
+        const underlineStyle = ref({});
+
+        const setActiveTab = (index, event) => {
+            activeIndex.value = index;
+            updateUnderline(event.target);
+        };
+        const updateUnderline = (tabElement) => {
+            underlineStyle.value = {
+                width: `${tabElement.offsetWidth}px`,
+                left: `${tabElement.offsetLeft}px`
+            };
+        };
+        return {
+            tabs,
+            activeIndex,
+            underlineStyle,
+            setActiveTab
+        };
+
+    },
     data() {
         return {
-            topics: [
-                "One space for all sales exercise",
-                "Automate and scale",
-                "Instant Sales "
-
-            ],
             whybox: [
                 {
                     icon: "/src/assets/icons/tick.svg",
@@ -62,3 +90,54 @@ export default {
     }
 }
 </script>
+
+<style>
+.tabs {
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+
+
+}
+
+@media screen and (max-width: 820px) {
+    .tabs {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+}
+@media screen and (max-width: 600px){
+    .tabs {
+        
+    }
+}
+
+.tab {
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    position: relative;
+    text-wrap: nowrap;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: #13728c;
+
+}
+
+.underline {
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    background-color: #13728c;
+    transition: all 0.3s ease;
+}
+</style>

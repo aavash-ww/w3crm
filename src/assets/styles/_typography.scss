@@ -7,12 +7,16 @@ $tertiary_font: "Roboto", serif;
 html {
   font-size: 16px;
   font-family: $primary_font, sans-serif;
+  
 }
 
 p {
   font-size: 1rem;
   line-height: 1.5;
-  //   font-family: $secondary_font;
+  @include sm {
+    font-size: 0.875rem;
+  }
+  
 }
 
 h1 {
@@ -42,4 +46,7 @@ h6 {
 }
 small {
   font-size: 0.694rem;
+  @include sm {
+    font-size: 0.6rem;
+  }
 }

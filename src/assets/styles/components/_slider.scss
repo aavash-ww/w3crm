@@ -1,34 +1,56 @@
 .slider {
-  height: 110vh;
+  height: 100vh;
   background: lighten($primary, 50%);
   overflow-y: hidden;
+  position: relative;
+  overflow-x: hidden;
 
   &__text {
     text-align: center;
-    padding: 4rem 6rem 2rem 6rem;
+    padding: 5rem 2rem;
+
+    @include sm {
+      padding: 3rem 0.5rem;
+    }
     h1 {
       color: darken($primary2, 10%);
       line-height: 1;
       margin-bottom: 1.5rem;
+      @include md {
+        font-size: 2.488rem;
+      }
+      @include sm {
+        font-size: 2.074rem;
+        margin-bottom: 0.5rem;
+      }
     }
     p {
-        padding: 0 2rem;
-        margin-bottom: 1.4rem;
+      padding: 0 2rem;
+      margin-bottom: 1.4rem;
     }
     &__buttongrp {
       display: flex;
+      gap: 1rem;
+      @include sm {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
       align-items: center;
       justify-content: center;
       margin-bottom: 0.5rem;
-
-      gap: 1rem;
       &__1 {
         @extend %button;
+        @include sm {
+          width: 80%;
+        }
         text-align: center;
         background: $secondary;
       }
       &__2 {
         @extend %button;
+        @include sm {
+          width: 80%;
+        }
         color: $secondary;
         background: lighten($secondary, 40%);
       }
@@ -36,16 +58,24 @@
     }
   }
   &__image {
-    display: flex;
-    justify-content: center;
-    width: 70%;
-    height: 320px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      height: 250px;
+      @include xl {
+        height: 200px;
+      }
+      @include md {
+        height: 160px;
+      }
+      @include sm {
+        height: 130px;
+      }
+      @extend %image-cover;
     }
   }
 }

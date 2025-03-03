@@ -1,5 +1,8 @@
 <template>
     <header class="header">
+        <div class="header__menu">
+            <img src="../assets/icons/menu-iconn.svg" alt="">
+        </div>
         <div class="header__logo">
             <img src="../assets/images/w3reservations.png" alt="">
         </div>
@@ -12,8 +15,8 @@
                 <li>Why W3</li>
                 <li>FAQs</li>
                 <li>Contacts</li>
-
             </ul>
+            
         </nav>
         <div class="header__button">
             <div class="header__button__search">

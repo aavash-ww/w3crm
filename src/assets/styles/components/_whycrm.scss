@@ -1,37 +1,8 @@
 .whycrm {
   padding: 2rem 0;
-  &__nav {
-    @extend %container;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    position: relative;
-    // padding: 0 5rem;
-    &::after {
-      content: "";
-      position: absolute;
-      background: black;
-      height: 1.2px;
-      width: 100%;
-      left: 0;
-      bottom: -3px;
-    }
-    .active {
-      font-weight: 700;
-      color: darken($primary2, 10%);
-    }
-    p {
-      // padding: 0 4rem;
-      transition: all ease 0.3s;
-      cursor: pointer;
-      &:hover {
-        color: darken($primary2, 10%);
-        font-weight: 700;
-      }
-    }
-  }
+
   &__content {
-    display: flex;    
+    display: flex;
     gap: 1rem;
     padding: 2rem 1rem;
     &__image {
