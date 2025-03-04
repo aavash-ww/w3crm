@@ -1,24 +1,28 @@
 <template>
     <div class="whycrm">
         <nav class="tabs">
+            <button @click="scrollLeft">&lt;</button>
+            <div class="tab-container" ref="navRef">
 
-            <div v-for="(tab, index) in tabs" :key="index" class="tab" :class="{ active: activeIndex === index }"
-                @click="setActiveTab(index, $event)">
-                {{ tab }}
+                <div v-for="(tab, index) in tabs" :key="index" class="tab" :class="{ active: activeIndex === index }"
+                    @click="setActiveTab(index, $event)">
+                    {{ tab }}
+                </div>
+                <div class="underline" :style="underlineStyle"></div>
             </div>
-            <div class="underline" :style="underlineStyle"></div>
+            <button @click="scrollRight">&gt;</button>
         </nav>
+
         <div class="whycrm__content">
             <div class="whycrm__content__image">
                 <img src="../assets/images/crm-dash.jpg" alt="">
             </div>
 
             <div class="whycrm__content__text">
-                <div v-for="el, idx in whybox" :key="idx" class="whycrm__content__text__wrap">
+                <div v-for="(el, idx) in whybox" :key="idx" class="whycrm__content__text__wrap">
                     <div class="whycrm__content__text__wrap__title">
                         <img :src="el.icon" :alt="el.title">
                         <h6>{{ el.title }}</h6>
-
                     </div>
                     <p>{{ el.descrption }}</p>
                 </div>
@@ -28,72 +32,91 @@
     </div>
 </template>
 
-<script>
-import { ref } from "vue";
-export default {
+<script setup>
+import { ref, onMounted } from "vue";
 
-    setup() {
-        const tabs = ref([
-            "Manage Leads and deals",
-            "One space for all sales",
-            "Automate and scale",
-            "Instant Sales "
-        ]);
-        const activeIndex = ref(0);
-        const underlineStyle = ref({});
+const navRef = ref(null);
 
-        const setActiveTab = (index, event) => {
-            activeIndex.value = index;
-            updateUnderline(event.target);
-        };
-        const updateUnderline = (tabElement) => {
-            underlineStyle.value = {
-                width: `${tabElement.offsetWidth}px`,
-                left: `${tabElement.offsetLeft}px`
-            };
-        };
-        return {
-            tabs,
-            activeIndex,
-            underlineStyle,
-            setActiveTab
-        };
-
-    },
-    data() {
-        return {
-            whybox: [
-                {
-                    icon: "/src/assets/icons/tick.svg",
-                    title: "Customize your pipelines",
-                    descrption: "Import data from spreadsheets or other pipeline management software in  just a few clicks. Link products to deals to track  negotiations and see the bigger picture."
-                },
-                {
-                    icon: "/src/assets/icons/tick.svg",
-                    title: "Reach your sales potential",
-                    descrption: "Import data from spreadsheets or other pipeline management software in  just a few clicks. Link products to deals to track  negotiations and see the bigger picture."
-                },
-                {
-                    icon: "/src/assets/icons/tick.svg",
-                    title: "Manage your deals and leads",
-                    descrption: "Import data from spreadsheets or other pipeline management software in  just a few clicks. Link products to deals to track  negotiations and see the bigger picture."
-                },
-                {
-                    icon: "/src/assets/icons/tick.svg",
-                    title: "Customize your pipelines",
-                    descrption: "Import data from spreadsheets or other pipeline management software in  just a few clicks. Link products to deals to track  negotiations and see the bigger picture."
-                },
-
-            ]
-
-        }
+// Scroll functions
+const scrollLeft = () => {
+    if (navRef.value) {
+        navRef.value.scrollBy({ left: -200, behavior: "smooth" });
     }
-}
+};
+const scrollRight = () => {
+    if (navRef.value) {
+        navRef.value.scrollBy({ left: 200, behavior: "smooth" });
+    }
+};
+
+// Tabs
+const tabs = ref([
+    "Manage Leads and deals",
+    "One space for all sales",
+    "Automate and scale",
+    "Instant Sales "
+]);
+const activeIndex = ref(0);
+const underlineStyle = ref({});
+
+const setActiveTab = (index, event) => {
+    activeIndex.value = index;
+    updateUnderline(event.target);
+};
+const updateUnderline = (tabElement) => {
+    underlineStyle.value = {
+        width: `${tabElement.offsetWidth}px`,
+        left: `${tabElement.offsetLeft}px`
+    };
+};
+
+onMounted(() => {
+    const activeTab = document.querySelector(".tab.active");
+    if (activeTab) {
+        updateUnderline(activeTab);
+    }
+});
+
+// Tab Data
+const whybox = ref([
+    {
+        icon: "/src/assets/icons/tick.svg",
+        title: "Customize your pipelines",
+        descrption: "Import data from spreadsheets or other pipeline management software in just a few clicks.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, eveniet!"
+    },
+    {
+        icon: "/src/assets/icons/tick.svg",
+        title: "Reach your sales potential",
+        descrption: "Import data from spreadsheets or other pipeline management software in just a few clicks.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, eveniet!",
+    },
+    {
+        icon: "/src/assets/icons/tick.svg",
+        title: "Manage your deals and leads",
+        descrption: "Import data from spreadsheets or other pipeline management software in just a few clicks.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, eveniet!"
+    },
+    {
+        icon: "/src/assets/icons/tick.svg",
+        title: "Customize your pipelines",
+        descrption: "Import data from spreadsheets or other pipeline management software in just a few clicks.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, eveniet!"
+    }
+]);
 </script>
 
 <style>
 .tabs {
     display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+.tab-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-grow: 1;
+    white-space: nowrap;
+    align-items: center;
     position: relative;
     border-bottom: 2px solid #ddd;
     padding-bottom: 5px;
@@ -101,20 +124,25 @@ export default {
     width: 100%;
     max-width: 90%;
     margin: 0 auto;
+}
 
+/* Hide scrollbar */
+.tab-container::-webkit-scrollbar {
+    display: none;
+}
 
+.tabs button {
+    display: none;
+    border: none;
+    background: #fff;
+    font-size: 1.5rem;
+    color: #818181;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 820px) {
-    .tabs {
-        overflow-x: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-}
-@media screen and (max-width: 600px){
-    .tabs {
-        
+    .tabs button {
+        display: block;
     }
 }
 
@@ -130,7 +158,6 @@ export default {
 .tab.active {
     font-weight: bold;
     color: #13728c;
-
 }
 
 .underline {
