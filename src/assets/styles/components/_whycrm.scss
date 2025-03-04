@@ -10,8 +10,14 @@
     padding: 2rem 1rem;
     &__image {
       margin-top: 1rem;
-      display: flex;
-      justify-content: center;
+      @include xl {
+        margin-left: 3rem;
+      }
+      @include sm {
+        margin-left: unset;
+        display: flex;
+        justify-content: center;
+      }
       img {
         border-radius: 1rem;
         height: 400px;

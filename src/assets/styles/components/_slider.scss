@@ -65,7 +65,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: auto;
-      height: 250px;
+      height: 225px;
       @include xl {
         height: 200px;
       }
@@ -73,7 +73,7 @@
         height: 160px;
       }
       @include sm {
-        height: 130px;
+        height: 120px;
       }
       @extend %image-cover;
     }
