@@ -56,9 +56,7 @@
 .trustcard {
     min-width: 200px;
     padding: 15px;
-    background: #3c3c3c;
     text-align: center;
-    border-radius: 4px;
 }
 
 /* Infinite scrolling animation */

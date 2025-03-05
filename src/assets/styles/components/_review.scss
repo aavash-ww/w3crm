@@ -1,6 +1,6 @@
 .review {
   display: flex;
-  
+
   @include breakpoint(842px) {
     flex-direction: column;
   }
@@ -16,11 +16,13 @@
   padding: 2rem 0;
   &__image {
     display: flex;
+    // gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
     @include breakpoint(842px) {
       margin: 1rem 0;
     }
-    // padding-right: 1.5rem;
+    padding-right: 1.5rem;
 
     &__person {
       height: 250px;
@@ -78,3 +80,5 @@
     }
   }
 }
+
+

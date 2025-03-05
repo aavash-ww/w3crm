@@ -3,7 +3,6 @@
         <div class="review">
             <div class="review__image">
                 <img class="review__image__person" src="../assets/images/review.jpeg" alt="">
-                <img class="review__image__feature" src="../assets/images/featuree.png" alt="">
 
             </div>
             <div class="review__text">
@@ -34,7 +33,7 @@
     </div>
     <!-- anotehr  -->
     <div>
-        <div class="review">
+        <div class="review mid">
             <div class="review__text">
                 <div class="review__text__wrap">
                     <h3>Save hours with automated lead nurturing</h3>
@@ -61,7 +60,7 @@
             </div>
             <div class="review__image" style="padding-left: 1rem;">
                 <img class="review__image__person" src="../assets/images/avatarimg4.jpg" alt="">
-                <img class="review__image__feature" src="../assets/images/featuree.png" alt="">
+
 
             </div>
         </div>
@@ -71,7 +70,6 @@
         <div class="review">
             <div class="review__image">
                 <img class="review__image__person" src="../assets/images/partnercard2.jpeg" alt="">
-                <img class="review__image__feature" src="../assets/images/featuree.png" alt="">
 
             </div>
             <div class="review__text">
