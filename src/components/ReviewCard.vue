@@ -1,5 +1,5 @@
 <template>
-    <div style="background: #cceef9;">
+    <div>
         <div class="review">
             <div class="review__image">
                 <img class="review__image__person" src="../assets/images/review.jpeg" alt="">
@@ -33,7 +33,7 @@
         </div>
     </div>
     <!-- anotehr  -->
-    <div style="background: #9edef4;">
+    <div>
         <div class="review">
             <div class="review__text">
                 <div class="review__text__wrap">
@@ -41,7 +41,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, minus? Lorem, ipsum dolor
                         sit
                         amet consectetur adipisicing elit. Provident, tempora?</p>
-                    <div class="review__text__wrap__review" >
+                    <div class="review__text__wrap__review">
                         <img src="../assets/images/quotes.svg" alt="">
 
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatibus aut labore
@@ -67,7 +67,7 @@
         </div>
     </div>
     <!-- another  -->
-    <div style="background: #cceef9;">
+    <div>
         <div class="review">
             <div class="review__image">
                 <img class="review__image__person" src="../assets/images/partnercard2.jpeg" alt="">

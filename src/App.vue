@@ -2,7 +2,7 @@
   <Layout>
     <Suspense>
       <template #default>
-        <Homepage />
+        <router-view />
       </template>
       <template #fallback>
         <h1>Loading....</h1>
@@ -14,13 +14,13 @@
 
 <script>
 import Layout from './Layout.vue';
-import Homepage from './pages/Homepage.vue';
+// import Homepage from './pages/Homepage.vue';
 
 
 
 export default {
   components: {
-    Homepage,
+    // Homepage,
     Layout
 
   }

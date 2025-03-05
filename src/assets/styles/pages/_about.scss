@@ -1,0 +1,28 @@
+.about {
+  &__wrapper {
+    display: flex; 
+    padding: 3rem;
+    gap: 2rem;
+    &__text {
+        h2 {
+            margin-bottom: 1rem;
+        }
+        p {
+            line-height: 24px;
+        }
+    }
+
+    &__image img {
+      height: 300px;
+      width: auto;
+    }
+
+  }
+}
+
+.top {
+  background: lighten($primary, 50%);
+  h2 {
+    color: $primary2;
+  }
+}
