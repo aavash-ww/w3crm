@@ -7,13 +7,16 @@
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, eos ea rerum aliquam unde magnam
                     facere
-                    incidunt aspernatur deserunt distinctio illum tempore sequi aperiam impedit! <br>
+                    incidunt aspernatur deserunt distinctio illum tempore sequi aperiam impedit!,</p>
 
+                <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate excepturi repudiandae aliquid,
-                    nemo
-                    sunt <br>
-                    odio expedita! Numquam assumenda dolor iusto?
+                    nemo sunt Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, perspiciatis?
                 </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum earum id deserunt odit
+                    inventore et praesentium dolore maiores ratione?</p>
+
+
             </div>
             <div class="about__wrapper__image">
                 <img src="../assets/images/crmgp1.webp" alt="">
@@ -24,47 +27,138 @@
     <section class="about">
         <div class="about__wrapper">
             <div class="about__wrapper__image">
-            <img src="../assets/images/crmgp.webp" alt="">
-        </div>
-        <div class="about__wrapper__text">
-            <h2>A CRM built by salespeople, for salespeople</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, provident veritatis. Obcaecati pariatur
-                tempore enim repellendus mollitia dolorem atque, dolores voluptas temporibus provident, ex natus. Culpa
-                nobis aperiam aspernatur tenetur!</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, vitae inventore accusantium ducimus
-                beatae voluptatem quia cumque commodi libero alias.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore sint rerum aliquam illo saepe cupiditate
-                excepturi neque hic unde expedita.</p>
-        </div>
+                <img src="../assets/images/crmgp.webp" alt="">
+            </div>
+            <div class="about__wrapper__text">
+                <h3>A CRM built by salespeople, for salespeople</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, provident veritatis. Obcaecati
+                    pariatur
+                    tempore enim repellendus mollitia dolorem atque, dolores voluptas temporibus provident, ex natus.
+                    Culpa
+                    nobis aperiam aspernatur tenetur!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, vitae inventore accusantium ducimus
+                    beatae voluptatem quia cumque commodi libero alias.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore sint rerum aliquam illo saepe
+                    cupiditate
+                    excepturi neque hic unde expedita.</p>
+            </div>
         </div>
     </section>
     <section class="about">
         <div class="about__wrapper">
             <div class="about__wrapper__text">
-            <h2>Our CRM mission statement</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem officiis, consectetur enim ut rem
-                mollitia quasi? Animi non nisi obcaecati cumque perspiciatis natus ea iusto. <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam velit, deserunt saepe rem molestiae
-                porro
-                dignissimos nisi harum minima doloremque voluptate explicabo maxime numquam nam repellendus illo. Ipsa,
-                quos
-                pariatur?
+                <h3>Our CRM mission statement</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem officiis, consectetur enim ut rem
+                    mollitia quasi? Animi non nisi obcaecati cumque perspiciatis natus ea iusto.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam velit, deserunt saepe rem
+                    molestiae
+                    porro
+                    dignissimos nisi harum minima doloremque voluptate explicabo maxime numquam nam repellendus illo.
+                    Ipsa,
+                    quos
+                    pariatur?
 
-            </p>
-        </div>
-        <div class="about__wrapper__image">
-            <img src="../assets/images/aboutsce.png" alt="">
-        </div>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, officiis. Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Non, reprehenderit.
+                </p>
+            </div>
+            <div class="about__wrapper__image">
+                <img src="../assets/images/aboutsce.png" alt="">
+            </div>
         </div>
     </section>
-    <section>
-        <h3>Stats to be proud of</h3>
-        <h4></h4>
+    <div class="stats_main">
+        <section class="stats">
+            <h2>Stats to be proud of</h2>
+
+            <div class="stats__wrap">
+                <div v-for="(el, idx) in stats" :key="idx">
+                    <div class="stats__wrap__fig">
+                        <h3>{{ el.num }}</h3>
+                        <p>{{ el.des }}</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="success">
+        <h2>Sowing the seeds of success</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequatur necessitatibus dignissimos eos
+            distinctio, cumque quasi doloribus ut esse, nulla tempora natus? Quasi molestiae </p>
+        <div class="success__inner">
+            <div class="success__inner__div" v-for="(el, idx) in sucess" :key="idx">
+                <div class="success__inner__div__image">
+                    <img :src="el.path" alt="">
+                </div>
+                <div class="success__inner__div__text">
+                    <h6>{{ el.title }}</h6>
+                    <p>{{ el.des }}</p>
+                </div>
+            </div>
+        </div>
+
     </section>
 </template>
 
 <script>
 export default {
-    
+    data() {
+        return {
+            stats: [
+                {
+                    num: "100+",
+                    des: "Companies using W3 CRM"
+                },
+                {
+                    num: "~70",
+                    des: "Companies using W3 CRM"
+                },
+                {
+                    num: "50+",
+                    des: "W3 Marketplace integrations"
+                },
+                {
+                    num: "100+",
+                    des: "Companies using W3 CRM"
+                },
+            ],
+            sucess: [
+                {
+                    path: "/src/assets/icons/bulb.svg",
+                    title: "Internal drive",
+                    des: "tempora natus? Quasi molestiae nostrum molestias nemo suscipit, qui"
+                },
+                {
+                    path: "/src/assets/icons/graduation.svg",
+                    title: "Team first",
+                    des: "tempora natus? Quasi molestiae nostrum molestias nemo suscipit, qui"
+                },
+                {
+                    path: "/src/assets/icons/heartbeat.svg",
+                    title: "No excuses",
+                    des: "tempora natus? Quasi molestiae nostrum molestias nemo suscipit, qui"
+                },
+                {
+                    path: "/src/assets/icons/rocket.svg",
+                    title: "Be teachable",
+                    des: "tempora natus? Quasi molestiae nostrum molestias nemo suscipit, qui"
+                },
+                {
+                    path: "/src/assets/icons/target.svg",
+                    title: "Internal drive",
+                    des: "tempora natus? Quasi molestiae nostrum molestias nemo suscipit, qui"
+                },
+                {
+                    path: "/src/assets/icons/users.svg",
+                    title: "Don’t ruin other people’s days",
+                    des: "tempora natus? Quasi molestiae nostrum molestias nemo suscipit, qui"
+                },
+            ]
+        }
+    }
 }
 </script>

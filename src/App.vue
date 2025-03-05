@@ -14,13 +14,9 @@
 
 <script>
 import Layout from './Layout.vue';
-// import Homepage from './pages/Homepage.vue';
-
-
 
 export default {
   components: {
-    // Homepage,
     Layout
 
   }

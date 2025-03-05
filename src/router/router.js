@@ -12,6 +12,16 @@ const routes = [
     component: defineAsyncComponent(() => import("../pages/About.vue")),
     name: "About",
   },
+  {
+    path: "/faq",
+    component: defineAsyncComponent(() => import("../pages/FAQ.vue")),
+    name: "FAQ",
+  },
+  {
+    path: "/contacts",
+    component: defineAsyncComponent(() => import("../pages/Contacts.vue")),
+    name: "Contacts",
+  },
 ];
 
 const router = createRouter({

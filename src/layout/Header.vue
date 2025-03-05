@@ -15,9 +15,8 @@
                 <li> <span>Products</span> </li>
                 <li> <span>Resources</span> </li>
                 <li> <span>Why W3</span> </li>
-                <li> <span>FAQs</span> </li>
-                <li> <span>Contacts</span> </li>
-
+                <li><router-link to="/faq"><span> FAQs </span></router-link> </li>
+                <li><router-link to="/contacts"><span> Contacts </span></router-link> </li>
             </ul>
 
         </nav>
