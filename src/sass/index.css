@@ -93,7 +93,7 @@ a {
   font-size: 1.2rem;
 }
 
-.success, .stats, .footer .footer-wrapper {
+.contacts, .success, .stats, .footer .footer-wrapper {
   width: 100%;
   max-width: 90%;
   margin: 0 auto;
@@ -785,4 +785,68 @@ a {
 .success__inner__div__text p {
   padding-right: 3rem;
   font-family: "Open Sans";
+}
+
+.contacts {
+  background: #cceef9;
+  display: flex;
+  gap: 2rem;
+  min-height: 90vh;
+  font-family: "Open Sans", serif;
+}
+.contacts__left {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contacts__left h2 {
+  color: #13728c;
+  margin-bottom: 1.5rem;
+}
+.contacts__left p {
+  font-size: 1.1rem;
+  line-height: 32px;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  padding-right: 1rem;
+}
+.contacts__left__marks__checks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.contacts__left__marks__checks img {
+  width: 32px;
+  height: 32px;
+}
+.contacts__form {
+  flex: 1 1 50%;
+}
+.contacts__form h6 {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+.contacts__form form input {
+  width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.contacts__form__policy {
+  font-size: 12px;
+  padding: 1rem 2rem 1rem 0;
+}
+.contacts__form button {
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  background: #ff442b;
+  border-radius: 4rem;
+  color: white;
 }/*# sourceMappingURL=index.css.map */
