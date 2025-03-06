@@ -1,11 +1,12 @@
 .slider {
-  height: 100vh;
+  min-height: 100vh;
   background: lighten($primary, 50%);
-  overflow-y: hidden;
-  position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   &__text {
+    flex: 1 1 50%;
     text-align: center;
     padding: 5rem 2rem;
 
@@ -54,27 +55,37 @@
         color: $secondary;
         background: lighten($secondary, 40%);
       }
-      // text-align: center;
     }
   }
+  // &__image {
+  //   width: 100%;
+  //   img {
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     width: auto;
+  //     height: 225px;
+  //     @include xl {
+  //       height: 200px;
+  //     }
+  //     @include sm {
+  //       height: 160px;
+  //     }
+  //     // @include sm {
+  //     //   height: 120px;
+  //     // }
+  //     @extend %image-cover;
+  //   }
+  // }
   &__image {
-    width: 100%;
+    flex: 1 1 50%;
+    width: 80%;
+    @include sm {
+      width: 90%;
+    }
+    margin: 0 auto;
     img {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: auto;
-      height: 225px;
-      @include xl {
-        height: 200px;
-      }
-      @include md {
-        height: 160px;
-      }
-      @include sm {
-        height: 120px;
-      }
       @extend %image-cover;
     }
   }

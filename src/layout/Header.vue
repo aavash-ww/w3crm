@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <div class="header__menu">
+        <div class="header__menu" @click="openSidebar">
             <img src="../assets/icons/menu-iconn.svg" alt="">
         </div>
         <router-link to="/">
@@ -29,3 +29,23 @@
         </div>
     </header>
 </template>
+
+<script>
+import { ref } from "vue";
+
+export default {
+    setup() {
+        const isSidebarOpen = ref(false);
+
+        const openSidebar = () => {
+            isSidebarOpen.value = true;
+        };
+
+        const closeSidebar = () => {
+            isSidebarOpen.value = false;
+        };
+
+        return { isSidebarOpen, openSidebar, closeSidebar };
+    },
+};
+</script>

@@ -1,0 +1,62 @@
+.faqwrap {
+  background: #fff;
+  font-family: $secondary_font;
+  &__image {
+    // background:
+    padding: 2rem 0;
+    display: flex;
+    @include smd {
+        flex-direction: column;
+    }
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    gap: 1rem;
+
+    &__txt {
+      flex: 1 1 calc(50% - 1rem);
+      h1 {
+        color: #292929;
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__img {
+      flex: 1 1 calc(50% - 1rem);
+      img {
+        @extend %image-cover;
+      }
+    }
+  }
+  .faqbtm {
+    display: flex;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    @include smd {
+        max-width: 90%;
+    }
+    ul {
+      flex: 1 1 50%;
+      margin: auto 0;
+      padding-left: 2rem;
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: center;
+      //   align-items: center;
+      text-align: left;
+      li {
+        color: $primary2;
+        font-weight: 600;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        &:hover {
+          color: darken($primary2, 10%);
+          font-weight: 700;
+        }
+      }
+    }
+    .faq {
+      flex: 1 1 50%;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <Navbar />
     <Suspense>
       <template #default>
         <router-view />
@@ -17,7 +18,7 @@ import Layout from './Layout.vue';
 
 export default {
   components: {
-    Layout
+    Layout,
 
   }
 }

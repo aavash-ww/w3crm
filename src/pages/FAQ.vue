@@ -1,20 +1,43 @@
 <template>
-    <div style="background: #fffafa;">
-        <h2 class="title">CRM FAQs</h2>
-        <div class="faq">
-            <div v-for="(item, index) in faqs" :key="index" class="faq-item">
-                <!-- Question -->
-                <div class="faq-question" @click="toggleFAQ(index)">
-                    {{ item.question }}
-                    <div class="arrow" :class="{ open: activeIndex === index }">
-                        <img src="../assets/icons/dropdown.svg" alt="">
-                    </div>
+    <div class="faqwrap">
+        <div style="background: #f2f1ed;">
+            <div class="faqwrap__image">
+                <div class="faqwrap__image__txt">
+                    <h1>FAQs</h1>
+                    <p>Have Questions? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis molestias itaque
+                        suscipit cum eligendi odio doloribus eum tempora repellat neque.</p>
                 </div>
+                <div class="faqwrap__image__img">
+                    <img src="../assets/images/faq.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- <h2 class="title">CRM FAQs</h2> -->
+        <div class="faqbtm">
 
-                <!-- Answer -->
-                <div class="faq-answer-wrapper" ref="answerRefs"
-                    :style="activeIndex === index ? { height: answerHeights[index] + 'px' } : { height: '0px' }">
-                    <p class="faq-answer">{{ item.answer }}</p>
+            <ul>
+                <li>About us</li>
+                <li>Our Products</li>
+                <li>Contact Us</li>
+                <li>Prices & Sales</li>
+                <li>Resources</li>
+            </ul>
+
+            <div class="faq">
+                <div v-for="(item, index) in faqs" :key="index" class="faq-item">
+                    <!-- Question -->
+                    <div class="faq-question" @click="toggleFAQ(index)">
+                        {{ item.question }}
+                        <div class="arrow" :class="{ open: activeIndex === index }">
+                            <img src="../assets/icons/dropdown.svg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Answer -->
+                    <div class="faq-answer-wrapper" ref="answerRefs"
+                        :style="activeIndex === index ? { height: answerHeights[index] + 'px' } : { height: '0px' }">
+                        <p class="faq-answer">{{ item.answer }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,13 +54,6 @@ export default {
             { question: "Why W3 CRM?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto v" },
             { question: "Why W3 CRM?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto v" },
             { question: "Why W3 CRM?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto v" },
-            { question: "Why W3 CRM?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto v" },
-            { question: "Why W3 CRM?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto v" },
-            { question: "Why W3 CRM?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto v" },
-            { question: "Why W3 CRM?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto v" },
-
-
-
         ]);
 
         const activeIndex = ref(null);
@@ -74,11 +90,11 @@ export default {
 </script>
 
 <style>
-.title {
+/* .title {
     margin-bottom: 1.5rem;
     text-align: center;
     color: #072932;
-}
+} */
 
 .faq {
     width: 100%;
@@ -99,6 +115,13 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+@media screen and (max-width: 632px) {
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 4px;
+    }
 }
 
 .faq-question:hover {
