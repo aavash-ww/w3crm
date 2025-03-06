@@ -1,12 +1,18 @@
 .contacts {
   background: lighten($primary, 50%);
   display: flex;
+  @include xl {
+    flex-direction: column;
+  }
   gap: 2rem;
-  min-height: 90vh;
+  @include sm {
+    gap: 0;
+  }
+  padding: 3rem 0;
   font-family: $secondary_font;
   @extend %container;
   &__left {
-    flex: 1 1 50%;
+    flex: 1 1 calc(50% - 2rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,6 +23,9 @@
     p {
       font-size: 1.1rem;
       line-height: 32px;
+      @include sm {
+        line-height: 24px;
+      }
       margin-bottom: 1.5rem;
       text-align: justify;
       padding-right: 1rem;
@@ -36,35 +45,35 @@
     }
   }
   &__form {
-    flex: 1 1 50%;
+    flex: 1 1 calc(50% - 2rem);
     h6 {
-        margin-top: 4rem;
-        margin-bottom: 1rem;
+      margin-top: 4rem;
+      margin-bottom: 1rem;
     }
     form {
       input {
-        width: 80%;
+        width: 100%;
         padding: 12px;
         border-radius: 8px;
         outline: none;
         border: none;
         font-size: 1rem;
         margin-bottom: 1rem;
-
       }
     }
     &__policy {
-        font-size: 12px;
-        padding: 1rem 2rem 1rem 0 ;
+      font-size: 12px;
+      padding: 1rem 2rem 1rem 0;
     }
     button {
-        border: none;
-        padding: 1rem 3rem;
-        font-size: 1.2rem;
-        background: $secondary;
-        border-radius: 4rem;
-        color: white;
+      border: none;
+      padding: 1rem 3rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      background: $secondary;
+      border-radius: 8px;
+      color: white;
+      width: 100%;
     }
   }
 }
-

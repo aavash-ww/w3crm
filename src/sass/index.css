@@ -550,6 +550,7 @@ a {
 .footer {
   background-color: #292929;
   color: white;
+  overflow-x: hidden;
 }
 .footer .footer-wrapper {
   padding-top: 4rem;
@@ -710,8 +711,13 @@ a {
 
 .about__wrapper {
   display: flex;
-  padding: 3rem;
+  padding: 3rem 1rem;
   gap: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  .about__wrapper {
+    flex-direction: column-reverse;
+  }
 }
 .about__wrapper__text h3 {
   margin-bottom: 1rem;
@@ -724,6 +730,13 @@ a {
 .about__wrapper__image img {
   height: 300px;
   width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 1000px) {
+  .about__wrapper__image img {
+    width: 100%;
+  }
 }
 
 .top {
@@ -741,15 +754,23 @@ a {
 
 .stats h2 {
   color: #072932;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .stats__wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 1000px) {
+  .stats__wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
 .stats__wrap__fig h3 {
   color: #13728c;
+  margin-bottom: 0.5rem;
 }
 
 .success {
@@ -764,6 +785,16 @@ a {
   gap: 1rem;
   padding: 2rem 0;
   grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 768px) {
+  .success__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .success__inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .success__inner__div {
   display: flex;
@@ -792,11 +823,21 @@ a {
   background: #cceef9;
   display: flex;
   gap: 2rem;
-  min-height: 90vh;
+  padding: 3rem 0;
   font-family: "Open Sans", serif;
 }
+@media screen and (max-width: 1000px) {
+  .contacts {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contacts {
+    gap: 0;
+  }
+}
 .contacts__left {
-  flex: 1 1 50%;
+  flex: 1 1 calc(50% - 2rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -812,6 +853,11 @@ a {
   text-align: justify;
   padding-right: 1rem;
 }
+@media screen and (max-width: 500px) {
+  .contacts__left p {
+    line-height: 24px;
+  }
+}
 .contacts__left__marks__checks {
   display: flex;
   align-items: center;
@@ -824,14 +870,14 @@ a {
   height: 32px;
 }
 .contacts__form {
-  flex: 1 1 50%;
+  flex: 1 1 calc(50% - 2rem);
 }
 .contacts__form h6 {
   margin-top: 4rem;
   margin-bottom: 1rem;
 }
 .contacts__form form input {
-  width: 80%;
+  width: 100%;
   padding: 12px;
   border-radius: 8px;
   outline: none;
@@ -847,7 +893,9 @@ a {
   border: none;
   padding: 1rem 3rem;
   font-size: 1.2rem;
+  font-weight: 600;
   background: #ff442b;
-  border-radius: 4rem;
+  border-radius: 8px;
   color: white;
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

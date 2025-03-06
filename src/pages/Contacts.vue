@@ -32,8 +32,7 @@
                     <input type="text" name="" id="" placeholder="Company Name">
 
                 </form>
-                <div class="contacts__form__policy">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service
-                    apply</div>
+                <div class="contacts__form__policy">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</div>
                 <button>Submit</button>
             </div>
 
@@ -107,7 +106,7 @@ export default {
 <style>
 .single-select {
     position: relative;
-    width: 80%;
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 0px;
