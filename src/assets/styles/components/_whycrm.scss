@@ -1,5 +1,5 @@
 .whycrm {
-  padding: 2rem 0;
+  // padding: 2rem 0;
 
   &__content {
     display: flex;
@@ -9,14 +9,16 @@
     gap: 1rem;
     padding: 2rem 1rem;
     &__image {
+      // flex: 1 1 calc(50% - 1rem);
       margin-top: 1rem;
       @include xl {
-        margin-left: 3rem;
+        margin-left: 1.5rem;
       }
       @include sm {
+        width: 100%;
         margin-left: unset;
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
       }
       img {
         border-radius: 1rem;
@@ -26,11 +28,15 @@
         }
         @include sm {
           height: 200px;
+          width: 100%;
         }
         width: auto;
+        
+        
       }
     }
     &__text {
+      // flex: 1 1 calc(50% - 1rem);
       padding: 1.3rem 0;
       margin-left: 2rem;
       margin-bottom: 2rem;

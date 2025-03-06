@@ -10,23 +10,25 @@
                     <h3>Contribute on Sales and Management</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, minus? Lorem, ipsum dolor
                         sit
-                        amet consectetur adipisicing elit. Provident, tempora?</p>
+                        amet consectetur adipisicing elit. Provident, tempora? </p>
                     <div class="review__text__wrap__review">
                         <img src="../assets/images/quotes.svg" alt="">
 
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatibus aut labore
                             molestiae
                             ullam
-                            doloribus accusantium dicta ratione officia placeat.</p>
+                            doloribus accusantium dicta ratione officia placeat. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Repellendus doloribus hic facere distinctio assumenda odit cumque!
+                            Accusantium obcaecati veniam perspiciatis!</p>
                     </div>
                 </div>
                 <div class="review__text__name">
-                    <span class="review__text__name__main">
+                    <div class="review__text__name__main">
                         Nirmal Gaywali
-                    </span> <br>
-                    <span class="review__text__name__position">
+                    </div>
+                    <div class="review__text__name__position">
                         Manager, The Gurkha Kitchen
-                    </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,19 +48,21 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatibus aut labore
                             molestiae
                             ullam
-                            doloribus accusantium dicta ratione officia placeat.</p>
+                            doloribus accusantium dicta ratione officia placeat. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Ipsum reprehenderit commodi ab sit ratione magnam molestiae veritatis
+                            eveniet, impedit enim?</p>
                     </div>
                 </div>
                 <div class="review__text__name">
-                    <span class="review__text__name__main">
+                    <div class="review__text__name__main">
                         Nirmal Gaywali
-                    </span> <br>
-                    <span class="review__text__name__position">
+                    </div>
+                    <div class="review__text__name__position">
                         Manager, The Gurkha Kitchen
-                    </span>
+                    </div>
                 </div>
             </div>
-            <div class="review__image" style="padding-left: 1rem;">
+            <div class="review__image">
                 <img class="review__image__person" src="../assets/images/avatarimg4.jpg" alt="">
 
 
@@ -84,18 +88,28 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatibus aut labore
                             molestiae
                             ullam
-                            doloribus accusantium dicta ratione officia placeat.</p>
+                            doloribus accusantium dicta ratione officia placeat. Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Ipsa mollitia consequatur quod magnam velit accusantium similique
+                            laboriosam libero, recusandae excepturi.</p>
                     </div>
                 </div>
                 <div class="review__text__name">
-                    <span class="review__text__name__main">
+                    <div class="review__text__name__main">
                         Nirmal Gaywali
-                    </span> <br>
-                    <span class="review__text__name__position">
+                    </div>
+                    <div class="review__text__name__position">
                         Manager, The Gurkha Kitchen
-                    </span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<style>
+@media screen and (max-width: 768px) {
+    .mid {
+        flex-direction: column-reverse !important;
+    }
+}
+</style>
