@@ -56,6 +56,7 @@
     <!-- Blogs Section  -->
     <Blog />
 
+    <!-- Pricing  -->
     <section class="pricing">
         <h3>Plans designed for small businesses on the rise</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam impedit maiores optio Lorem ipsum dolor sit

@@ -42,6 +42,7 @@
   }
 }
 
+// Feature
 .feature {
   background: linear-gradient(
     to right,
@@ -58,6 +59,9 @@
   &__image {
     flex: 1 1 50%;
     position: relative;
+    @include md {
+      display: none;
+    }
     &__wrap {
       position: absolute;
       background: #e4f5fc;
@@ -99,6 +103,9 @@
   &__text {
     flex: 1 1 50%;
     margin-left: 2rem;
+    @include sm {
+      margin-left: unset;
+    }
     h2 {
       color: #292929;
       margin-bottom: 1rem;
@@ -129,6 +136,12 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
     &__card {
       padding-block: 2rem;
       cursor: pointer;

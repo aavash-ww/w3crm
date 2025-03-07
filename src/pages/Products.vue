@@ -1,5 +1,5 @@
 <template>
     <div style="min-height: 100vh; background: lightblue;">
-        <h1>On progress.....</h1>
+        <h1>Product Page</h1>
     </div>
 </template>

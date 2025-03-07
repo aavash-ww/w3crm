@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="whycrm">
         <nav class="tabs">
             <button @click="scrollLeft">&lt;</button>
@@ -82,7 +82,7 @@ const whybox = ref([
     {
         icon: "/src/assets/icons/tick.svg",
         title: "Customize your pipelines",
-        descrption: "Import data from spreadsheets or other pipeline management software in just a few clicks.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, eveniet!"
+        descrption: "Import data from spreadsheets or other pipeline management software in just a few clicks.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, eveniet!",
     },
     {
         icon: "/src/assets/icons/tick.svg",
@@ -100,6 +100,112 @@ const whybox = ref([
         descrption: "Import data from spreadsheets or other pipeline management software in just a few clicks.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, eveniet!"
     }
 ]);
+</script> -->
+<template>
+    <div class="whycrm">
+        <nav class="tabs">
+            <button @click="scrollLeft">&lt;</button>
+            <div class="tab-container" ref="navRef">
+                <div v-for="(tab, index) in tabs" :key="index" class="tab" :class="{ active: activeIndex === index }"
+                    @click="setActiveTab(index, $event)">
+                    {{ tab }}
+                </div>
+                <div class="underline" :style="underlineStyle"></div>
+            </div>
+            <button @click="scrollRight">&gt;</button>
+        </nav>
+
+        <div class="whycrm__content">
+            <div class="whycrm__content__image">
+                <img :src="whybox[activeIndex]?.image" alt="">
+            </div>
+
+            <div class="whycrm__content__text">
+                <div v-for="(el, idx) in whybox" :key="idx" class="whycrm__content__text__wrap">
+                    <div class="whycrm__content__text__wrap__title">
+                        <img :src="el.icon" :alt="el.title">
+                        <h6>{{ el.title }}</h6>
+                    </div>
+                    <p>{{ el.descrption }}</p>
+                </div>
+                <span>Learn More</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { ref, onMounted } from "vue";
+
+const navRef = ref(null);
+
+// Scroll functions
+const scrollLeft = () => {
+    if (navRef.value) {
+        navRef.value.scrollBy({ left: -200, behavior: "smooth" });
+    }
+};
+const scrollRight = () => {
+    if (navRef.value) {
+        navRef.value.scrollBy({ left: 200, behavior: "smooth" });
+    }
+};
+
+// Tabs
+const tabs = ref([
+    "Manage Leads and deals",
+    "One space for all sales",
+    "Automate and scale",
+    "Instant Sales"
+]);
+const activeIndex = ref(0);
+const underlineStyle = ref({});
+
+const setActiveTab = (index, event) => {
+    activeIndex.value = index;
+    updateUnderline(event.target);
+};
+const updateUnderline = (tabElement) => {
+    underlineStyle.value = {
+        width: `${tabElement.offsetWidth}px`,
+        left: `${tabElement.offsetLeft}px`
+    };
+};
+
+onMounted(() => {
+    const activeTab = document.querySelector(".tab.active");
+    if (activeTab) {
+        updateUnderline(activeTab);
+    }
+});
+
+// Tab Data
+const whybox = ref([
+    {
+        icon: "/src/assets/icons/tick.svg",
+        title: "Customize your pipelines",
+        descrption: "Import data from spreadsheets or other pipeline management software in just a few clicks.",
+        image: "/src/assets/images/crm-dash.jpg"
+    },
+    {
+        icon: "/src/assets/icons/tick.svg",
+        title: "Reach your sales potential",
+        descrption: "Boost your sales performance with advanced analytics and automation.",
+        image: "/src/assets/images/crmgp.webp"
+    },
+    {
+        icon: "/src/assets/icons/tick.svg",
+        title: "Manage your deals and leads",
+        descrption: "Keep track of your deals and leads in an organized pipeline view.",
+        image: "/src/assets/images/crm-dash.jpg"
+    },
+    {
+        icon: "/src/assets/icons/tick.svg",
+        title: "Customize your pipelines",
+        descrption: "Tailor your CRM pipeline to match your business workflow effortlessly.",
+        image: "/src/assets/images/crmgp1.webp"
+    }
+]);
 </script>
 
 <style>
@@ -108,6 +214,7 @@ const whybox = ref([
     align-items: center;
     padding: 0 1rem;
 }
+
 .tab-container {
     display: flex;
     overflow-x: auto;

@@ -3,7 +3,7 @@
     <Navbar />
     <Suspense>
       <template #default>
-        <router-view />
+        <router-view></router-view>
       </template>
       <template #fallback>
         <h1>Loading....</h1>

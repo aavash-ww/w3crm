@@ -60,10 +60,12 @@ $bp: 1180px;
 
       li {
         padding: 0 1.2rem;
+        position: relative;
         span {
           color: black;
           cursor: pointer;
           position: relative;
+          display: inline-block;
           &::after {
             content: "";
             width: 90%;
@@ -130,4 +132,9 @@ $bp: 1180px;
       }
     }
   }
+}
+
+
+ul li .active::after {
+  transform: scaleX(1);
 }

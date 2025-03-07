@@ -1,11 +1,24 @@
 .blog {
-  display: flex;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  @include xl {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
   gap: 1rem;
   &__wrap {
+    @include xl {
+      margin-bottom: 2rem;
+      max-inline-size: 450px;
+    }
     &__image {
       &__wrap {
+        overflow: hidden;
         position: relative;
-        max-inline-size: 450px;
+
         height: 320px;
         border-radius: 8px;
         background: darken($secondary2, 30%);

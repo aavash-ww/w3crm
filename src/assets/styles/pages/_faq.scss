@@ -67,7 +67,15 @@
     background: lighten($primary, 50%);
     display: flex;
     justify-content: space-between;
-    padding:  1rem 12rem;
+    padding: 1rem 12rem;
+    @include xl {
+      padding: 1rem 6rem;
+    }
+    @include md {
+      flex-direction: column-reverse;
+      // justify-content: center;
+      align-items: center;
+    }
     margin-bottom: 2rem;
     &__text {
       margin-block: auto;
@@ -87,6 +95,9 @@
       }
     }
     &__image {
+      @include md {
+        margin-bottom: 2rem;
+      }
       img {
         width: auto;
         height: 250px;

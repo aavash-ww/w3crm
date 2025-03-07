@@ -61,6 +61,10 @@ div {
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul li {
   list-style: none;
 }
@@ -190,11 +194,13 @@ a {
 }
 .header__nav__list li {
   padding: 0 1.2rem;
+  position: relative;
 }
 .header__nav__list li span {
   color: black;
   cursor: pointer;
   position: relative;
+  display: inline-block;
 }
 .header__nav__list li span::after {
   content: "";
@@ -263,6 +269,10 @@ a {
 }
 .header__button .free-trial-btn:hover {
   background: #f71d00;
+}
+
+ul li .active::after {
+  transform: scaleX(1);
 }
 
 .slider {
@@ -626,12 +636,30 @@ a {
 }
 
 .blog {
-  display: flex;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
+@media screen and (max-width: 1000px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .blog__wrap {
+    margin-bottom: 2rem;
+    max-inline-size: 450px;
+  }
+}
 .blog__wrap__image__wrap {
+  overflow: hidden;
   position: relative;
-  max-inline-size: 450px;
   height: 320px;
   border-radius: 8px;
   background: #914100;
@@ -708,6 +736,11 @@ a {
   flex: 1 1 50%;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .feature__image {
+    display: none;
+  }
+}
 .feature__image__wrap {
   position: absolute;
   background: #e4f5fc;
@@ -750,6 +783,11 @@ a {
   flex: 1 1 50%;
   margin-left: 2rem;
 }
+@media screen and (max-width: 500px) {
+  .feature__text {
+    margin-left: unset;
+  }
+}
 .feature__text h2 {
   color: #292929;
   margin-bottom: 1rem;
@@ -776,6 +814,16 @@ a {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 768px) {
+  .pricing__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .pricing__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .pricing__cards__card {
   padding-block: 2rem;
@@ -1063,6 +1111,17 @@ a {
   padding: 1rem 12rem;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 1000px) {
+  .faqwrap .faqlast {
+    padding: 1rem 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faqwrap .faqlast {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
 .faqwrap .faqlast__text {
   margin-block: auto;
   color: #0d4d5f;
@@ -1079,6 +1138,11 @@ a {
   font-weight: 700;
   padding: 1rem 2rem;
   max-inline-size: 250px;
+}
+@media screen and (max-width: 768px) {
+  .faqwrap .faqlast__image {
+    margin-bottom: 2rem;
+  }
 }
 .faqwrap .faqlast__image img {
   width: auto;
