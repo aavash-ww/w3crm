@@ -1,0 +1,34 @@
+.blog {
+  display: flex;
+  gap: 1rem;
+  &__wrap {
+    &__image {
+      &__wrap {
+        position: relative;
+        max-inline-size: 450px;
+        height: 320px;
+        border-radius: 8px;
+        background: darken($secondary2, 30%);
+        // img {
+        // //   position: relative;
+        //   //   top: 0;
+        // }
+      }
+    }
+    &__text {
+      padding-inline: 6px;
+      h6 {
+        margin-block: 1rem;
+      }
+      p {
+        text-align: left;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      h6 {
+        text-decoration: underline;
+      }
+    }
+  }
+}

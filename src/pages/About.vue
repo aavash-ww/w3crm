@@ -15,8 +15,6 @@
                 </p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum earum id deserunt odit
                     inventore et praesentium dolore maiores ratione?</p>
-
-
             </div>
             <div class="about__wrapper__image">
                 <img src="../assets/images/crmgp1.webp" alt="">
@@ -25,7 +23,7 @@
     </section>
 
     <section class="about">
-        <div class="about__wrapper">
+        <div class="about__wrapper about-mid">
             <div class="about__wrapper__image">
                 <img src="../assets/images/crmgp.webp" alt="">
             </div>
@@ -162,3 +160,11 @@ export default {
     }
 }
 </script>
+
+<style>
+@media screen and (max-width: 1000px) {
+    .about-mid {
+        flex-direction: column !important;
+    }
+}
+</style>

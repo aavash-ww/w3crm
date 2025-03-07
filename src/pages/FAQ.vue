@@ -24,6 +24,7 @@
             </ul>
 
             <div class="faq">
+                <h4>CRM FAQs</h4>
                 <div v-for="(item, index) in faqs" :key="index" class="faq-item">
                     <!-- Question -->
                     <div class="faq-question" @click="toggleFAQ(index)">
@@ -39,6 +40,16 @@
                         <p class="faq-answer">{{ item.answer }}</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="faqlast">
+            <div class="faqlast__text">
+                <h3>Talk to an Expert</h3>
+                <div>Here we answer all questions.</div>
+                <button>Contact Support</button>
+            </div>
+            <div class="faqlast__image">
+                <img src="../assets/images/expert.png" alt="">
             </div>
         </div>
     </div>
@@ -60,13 +71,13 @@ export default {
         const answerRefs = ref([]);
         const answerHeights = ref([]);
 
-        //toggle question
+        //toggle question deropdwm
         const toggleFAQ = async (index) => {
             if (activeIndex.value === index) {
                 activeIndex.value = null;
             } else {
                 activeIndex.value = index;
-                await nextTick(); //Waits for DOm update
+                await nextTick(); //Async Dom uuupdate
                 answerHeights.value[index] = answerRefs.value[index]?.scrollHeight || 0;
             }
         };
