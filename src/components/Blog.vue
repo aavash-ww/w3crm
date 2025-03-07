@@ -11,7 +11,7 @@
 
                 </div>
                 <div class="blog__wrap__text">
-                    <h6>CRM evaluations: How to choose the perfect system</h6>
+                    <h6>CRM evaluations: How to choose perfect system</h6>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, provident fugiat! Inventore
                         rem
                         sunt
@@ -29,7 +29,7 @@
 
                 </div>
                 <div class="blog__wrap__text">
-                    <h6>CRM evaluations: How to choose the perfect system</h6>
+                    <h6>CRM evaluations: How to choose perfect system</h6>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, provident fugiat! Inventore
                         rem
                         sunt
@@ -47,7 +47,7 @@
 
                 </div>
                 <div class="blog__wrap__text">
-                    <h6>CRM evaluations: How to choose the perfect system</h6>
+                    <h6>CRM evaluations: How to choose perfect system</h6>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, provident fugiat! Inventore
                         rem
                         sunt
