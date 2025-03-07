@@ -18,7 +18,7 @@
             <div class="feature__image__wrap pie">
                 <div class="feature__image__wrap__top">
                     <img src="../assets/vectors/dollar.svg" alt="">
-                    <div>Lead performance reports</div>
+                    <div>W3 performance reports</div>
                 </div>
                 <div class="feature__image__wrap__btm">
                     <small>CUSTOM PEROID</small>
@@ -28,7 +28,7 @@
             <div class="feature__image__wrap stat">
                 <div class="feature__image__wrap__top">
                     <img src="../assets/vectors/dollar.svg" alt="">
-                    <div>Deal performance reports</div>
+                    <div>W3 performance reports</div>
                 </div>
                 <div class="feature__image__wrap__btm">
                     <small>THIS MONTH</small>
