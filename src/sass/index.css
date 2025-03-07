@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-.faqwrap__image__img img, .review__image__person, .slider__image img, .header__button__search img, .header__logo img, .header__menu img {
+.faqwrap__image__img img, .pricing__cards__card__img img, .review__image__person, .slider__image img, .header__button__search img, .header__logo img, .header__menu img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -84,7 +84,7 @@ a {
      object-fit: contain;
 }
 
-.feature__text button, .whycrm__content__text span, .slider__text__buttongrp__2, .slider__text__buttongrp__1 {
+.pricing button, .feature__text button, .whycrm__content__text span, .slider__text__buttongrp__2, .slider__text__buttongrp__1 {
   padding: 1rem 1.5rem;
   border-radius: 4rem;
   cursor: pointer;
@@ -93,7 +93,7 @@ a {
   font-size: 1.2rem;
 }
 
-.contacts, .success, .stats, .footer .footer-wrapper {
+.contacts, .success, .stats, .pricing, .footer .footer-wrapper {
   width: 100%;
   max-width: 90%;
   margin: 0 auto;
@@ -760,6 +760,47 @@ a {
   color: #ff442b;
   background: white;
   margin-top: 2rem;
+}
+
+.pricing {
+  padding-bottom: 4rem;
+}
+.pricing h3 {
+  margin-bottom: 1rem;
+  color: #072932;
+}
+.pricing p {
+  margin-bottom: 1rem;
+}
+.pricing__cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+.pricing__cards__card {
+  padding-block: 2rem;
+  cursor: pointer;
+}
+.pricing__cards__card__img {
+  background: #0d4d5f;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  padding: 0.5rem;
+}
+.pricing__cards__card__text {
+  text-align: left;
+}
+.pricing__cards__card__text h6 {
+  padding-block: 1rem;
+}
+.pricing__cards__card:hover h6 {
+  text-decoration: underline;
+}
+.pricing button {
+  color: #13728c;
+  border: none;
+  background: #cceef9;
 }
 
 .about__wrapper {

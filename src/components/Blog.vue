@@ -105,8 +105,8 @@ export default {
     position: absolute;
     left: 10%;
     bottom: 0;
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
 }
 

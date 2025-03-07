@@ -56,6 +56,24 @@
     <!-- Blogs Section  -->
     <Blog />
 
+    <section class="pricing">
+        <h3>Plans designed for small businesses on the rise</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam impedit maiores optio Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. eveniet praesentium at ducimus eaque reprehenderit velit,
+            officia quae consequuntur?</p>
+        <div class="pricing__cards">
+            <div class="pricing__cards__card" v-for="(el, idx) in cards" :key="idx">
+                <div class="pricing__cards__card__img">
+                    <img :src="el.img" alt="">
+                </div>
+                <div class="pricing__cards__card__text">
+                    <h6>{{ el.title }}</h6>
+                    <p>{{ el.des }}</p>
+                </div>
+            </div>
+        </div>
+        <button>See all features</button>
+    </section>
 
     <!-- Review Section  -->
     <section class="review-section">
@@ -80,6 +98,36 @@ export default {
         Whycrm,
         ReviewCard,
         Blog
+    },
+    data() {
+        return {
+            cards: [
+                {
+                    img: "/src/assets/icons/cirlce.svg",
+                    title: "Essential",
+                    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+
+                },
+                {
+                    img: "/src/assets/icons/star.svg",
+                    title: "Advanced",
+                    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+
+                },
+                {
+                    img: "/src/assets/icons/diamond.svg",
+                    title: "Professional",
+                    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+
+                },
+                {
+                    img: "/src/assets/icons/power.svg",
+                    title: "Power",
+                    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+
+                },
+            ]
+        }
     }
 }
 </script>
