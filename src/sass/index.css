@@ -918,7 +918,7 @@ a {
   background: #cceef9;
   display: flex;
   gap: 2rem;
-  padding: 3rem 0;
+  padding: 4rem 0;
   font-family: "Open Sans", serif;
 }
 @media screen and (max-width: 1000px) {
