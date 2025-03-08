@@ -1016,7 +1016,7 @@ ul li .active::after {
   flex: 1 1 calc(50% - 2rem);
 }
 .contacts__form h6 {
-  margin-top: 4rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .contacts__form form input {
