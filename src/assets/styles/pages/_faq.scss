@@ -49,13 +49,15 @@
       //   align-items: center;
       text-align: left;
       li {
-        color: $primary2;
         font-weight: 600;
         cursor: pointer;
         margin-bottom: 1rem;
-        &:hover {
-          color: darken($primary2, 10%);
-          font-weight: 700;
+        span {
+          color: $primary2;
+          &:hover {
+            color: darken($primary2, 10%);
+            font-weight: 700;
+          }
         }
       }
     }
@@ -85,6 +87,7 @@
       }
       button {
         margin-top: 1rem;
+        cursor: pointer;
         border: none;
         background: darken($primary2, 10%);
         color: lighten($primary, 50%);

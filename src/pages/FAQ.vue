@@ -16,11 +16,12 @@
         <div class="faqbtm">
 
             <ul>
-                <li>About us</li>
-                <li>Our Products</li>
-                <li>Contact Us</li>
-                <li>Prices & Sales</li>
-                <li>Resources</li>
+                <li><router-link to="/about"><span>About us</span></router-link></li>
+                <li><router-link to="/products"><span>Our Products</span></router-link></li>
+                <li><router-link to="/contacts"><span>Contact Us</span></router-link></li>
+                <li><router-link to="/pricing"><span>Prices & Sales</span></router-link></li>
+                <li><router-link to="/resources"><span>Resources</span></router-link></li>
+
             </ul>
 
             <div class="faq">
@@ -46,7 +47,7 @@
             <div class="faqlast__text">
                 <h3>Talk to an Expert</h3>
                 <div>Here we answer all questions.</div>
-                <button>Contact Support</button>
+                <router-link to="/contacts"><button>Contact Support</button></router-link>
             </div>
             <div class="faqlast__image">
                 <img src="../assets/images/expert.png" alt="">

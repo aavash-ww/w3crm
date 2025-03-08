@@ -1092,12 +1092,14 @@ ul li .active::after {
   text-align: left;
 }
 .faqwrap .faqbtm ul li {
-  color: #13728c;
   font-weight: 600;
   cursor: pointer;
   margin-bottom: 1rem;
 }
-.faqwrap .faqbtm ul li:hover {
+.faqwrap .faqbtm ul li span {
+  color: #13728c;
+}
+.faqwrap .faqbtm ul li span:hover {
   color: #0d4d5f;
   font-weight: 700;
 }
@@ -1131,6 +1133,7 @@ ul li .active::after {
 }
 .faqwrap .faqlast__text button {
   margin-top: 1rem;
+  cursor: pointer;
   border: none;
   background: #0d4d5f;
   color: #cceef9;

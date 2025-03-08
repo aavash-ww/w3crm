@@ -56,5 +56,5 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 
-const isActive = (path) => route.path === path;
+const isActive = (path) => route.path === path; 
 </script>
