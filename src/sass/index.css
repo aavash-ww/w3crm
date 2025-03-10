@@ -74,14 +74,14 @@ a {
   text-decoration: none;
 }
 
-.faqwrap__image__img img, .pricing__cards__card__img img, .review__image__person, .slider__image img, .header__button__search img, .header__logo img, .header__menu img {
+.faqwrap__image__img img, .abt__image img, .pricing__cards__card__img img, .review__image__person, .slider__image img, .header__button__search img, .header__logo img, .header__menu img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.success__inner__div__image img, .footer .footer-wrapper .footer-content-third .footergrid .grid img {
+.abt__text__wrap__card__img img, .success__inner__div__image img, .footer .footer-wrapper .footer-content-third .footergrid .grid img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -893,9 +893,6 @@ ul li .active::after {
   }
 }
 
-.top {
-  background: #cceef9;
-}
 .top h2 {
   color: #13728c;
   margin-bottom: 1rem;
@@ -971,6 +968,49 @@ ul li .active::after {
 .success__inner__div__text p {
   padding-right: 3rem;
   font-family: "Open Sans";
+}
+
+.abt {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  height: 100vh;
+  height: 100dvh;
+  margin-bottom: 1rem;
+  border-top: 2px solid #6e6969;
+}
+.abt__image {
+  flex: 1 1 calc(50% - 2rem);
+}
+.abt__text {
+  flex: 1 1 calc(50% - 2rem);
+}
+.abt__text h1 {
+  font-weight: 300;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+.abt__text__wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-between;
+}
+.abt__text__wrap__card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.abt__text__wrap__card__img {
+  width: 72px;
+  height: 72px;
+  margin-right: 1rem;
+}
+.abt__text__wrap__card__des h4 {
+  font-weight: 400;
+}
+.abt__text__wrap__card__des p {
+  color: #6e6969;
 }
 
 .contacts {

@@ -1,10 +1,22 @@
 <template>
-    <section>
-        <div>
+    <section class="abt">
+        <div class="abt__image">
             <img src="../assets/images/about-main.jpg" alt="">
         </div>
-        <div>
-            <h1>Our Vlaues</h1>
+
+        <div class="abt__text">
+            <h1>Our Vlaues.</h1>
+            <div class="abt__text__wrap">
+                <div v-for="(el, idx) in main" :key="idx" class="abt__text__wrap__card">
+                    <div class="abt__text__wrap__card__img">
+                        <img :src="el.image" :alt="el.title">
+                    </div>
+                    <div class="abt__text__wrap__card__des">
+                        <h4>{{ el.title }}</h4>
+                        <p>{{ el.des }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -164,6 +176,32 @@ export default {
                     path: "/src/assets/icons/users.svg",
                     title: "Don’t ruin other people’s days",
                     des: "tempora natus? Quasi molestiae nostrum molestias nemo suscipit, qui"
+                },
+            ],
+            main: [
+                {
+                    image: "/src/assets/icons/blocks.svg",
+                    title: "Create Community",
+                    des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ex laboriosam quaerat facere"
+
+                },
+                {
+                    image: "/src/assets/icons/diversity.svg",
+                    title: "Embrace Diversity",
+                    des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ex laboriosam quaerat facere"
+
+                },
+                {
+                    image: "/src/assets/icons/impact.svg",
+                    title: "Drive Impact",
+                    des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ex laboriosam quaerat facere"
+
+                },
+                {
+                    image: "/src/assets/icons/unity.svg",
+                    title: "Bring Others Alone",
+                    des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ex laboriosam quaerat facere"
+
                 },
             ]
         }
