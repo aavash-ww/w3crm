@@ -45,3 +45,12 @@
     }
   }
 }
+
+.blog-main {
+  padding-bottom: 8rem;
+  max-inline-size: 95%;
+  margin-inline: auto;
+  @include xl {
+    padding-bottom: 4rem;
+  }
+}

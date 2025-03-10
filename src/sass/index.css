@@ -276,14 +276,13 @@ ul li .active::after {
 }
 
 .slider {
-  min-height: 100vh;
   background: #cceef9;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 .slider__text {
-  flex: 1 1 50%;
+  flex: 1 1 70%;
   text-align: center;
   padding: 5rem 2rem;
 }
@@ -294,7 +293,8 @@ ul li .active::after {
 }
 .slider__text h1 {
   color: #0d4d5f;
-  line-height: 1;
+  line-height: 1.3;
+  text-wrap: balance;
   margin-bottom: 1.5rem;
 }
 @media screen and (max-width: 768px) {
@@ -344,7 +344,7 @@ ul li .active::after {
   }
 }
 .slider__image {
-  flex: 1 1 50%;
+  flex: 1 1 30%;
   width: 80%;
   margin: 0 auto;
 }
@@ -680,6 +680,17 @@ ul li .active::after {
   text-decoration: underline;
 }
 
+.blog-main {
+  padding-bottom: 8rem;
+  max-inline-size: 95%;
+  margin-inline: auto;
+}
+@media screen and (max-width: 1000px) {
+  .blog-main {
+    padding-bottom: 4rem;
+  }
+}
+
 /*-----------PartnerSection---------*/
 .partners {
   padding: 4rem 0;
@@ -726,7 +737,7 @@ ul li .active::after {
 
 .feature {
   background: linear-gradient(to right, #ff715e 10%, #ff9e91 50%, #ffc291 90%);
-  padding: 4rem;
+  padding: 2rem;
   min-height: 420px;
   display: flex;
   justify-content: center;

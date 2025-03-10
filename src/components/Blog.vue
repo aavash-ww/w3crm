@@ -65,12 +65,7 @@ export default {
 </script>
 
 <style>
-.blog-main {
-    padding-bottom: 8rem;
-    max-inline-size: 95%;
-    margin-inline: auto;
 
-}
 
 .blog-main h3 {
     margin-bottom: 1rem;
