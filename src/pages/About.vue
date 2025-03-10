@@ -1,5 +1,15 @@
 <template>
+    <section>
+        <div>
+            <img src="../assets/images/about-main.jpg" alt="">
+        </div>
+        <div>
+            <h1>Our Vlaues</h1>
+        </div>
+    </section>
+
     <section class="about top">
+
         <div class="about__wrapper">
             <div class="about__wrapper__text">
                 <h2>Empowering small businesses to grow</h2>
